@@ -6,7 +6,7 @@ import { spring2 } from '../utils/motionObj';
 
 const Title = styled(motion.h1)`
   font-family: var(--font-header);
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 1.2rem;
@@ -93,7 +93,11 @@ function App() {
         for the web, but I am also intrigued by the tech outside the browser
         environment. Here are some of the technologies I use:
       </Content>
-      <motion.ul variants={Variant} initial="hidden" animate="visible">
+      <motion.ul
+        style={{ marginTop: '0' }}
+        variants={Variant}
+        initial="hidden"
+        animate="visible">
         <Item variants={ItemVariant}>HTML</Item>
         <Item variants={ItemVariant}>CSS</Item>
         <Item variants={ItemVariant}>JavaScript</Item>
