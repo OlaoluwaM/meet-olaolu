@@ -9,43 +9,60 @@ import {
   TitleVariant,
   ContentVariant,
 } from '../utils/motionObj';
-import { WaveSVG } from './SVGbackground';
+import Particles from 'react-particles-js';
+import { params } from '../utils/parameters';
 import { FaReact, FaHtml5, FaCss3, FaJs } from 'react-icons/fa';
+
 const PageContainer = styled(motion.main).attrs({
   className: 'App',
 })`
-  background: var(--color1);
+  background: #000;
+  width: 100%;
+  height: 100vh;
   position: relative;
 
-  & > svg {
-    display: block;
+  & > div:first-of-type {
+    width: 100%;
+    height: 100%;
   }
 `;
 
 const TextContainer = styled(motion.div)`
-  padding-top: 50px;
   background: transparent;
-  width: 100%;
-  height: 50vh;
-  padding-left: 5%;
+  width: 90%;
+  z-index: 10;
+  height: fit-content;
+  padding-left: 0%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const Title = styled(motion.h1)`
   font-family: var(--font-header);
-  font-size: 5.2rem;
+  font-size: 7.2rem;
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 1rem;
+  width: auto;
 `;
 
 const Content = styled(motion.p)`
   font-family: var(--font-body);
   font-weight: 500;
-  width: 53%;
+  width: 56%;
   font-size: 1.3rem;
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: 2rem;
+`;
+
+const List = styled(motion.ul)`
+  list-style: none;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
 `;
 
 const Item = styled(motion.li)`
@@ -55,8 +72,10 @@ const Item = styled(motion.li)`
   display: flex;
   flex-direction: row;
   width: fit-content;
+  margin-right: 20px;
+
   & > svg {
-    margin-right: 20px;
+    margin-right: 5px;
     fill: #dbd8e3;
   }
 `;
@@ -64,6 +83,7 @@ const Item = styled(motion.li)`
 function App() {
   return (
     <PageContainer>
+      <Particles params={params} />
       <TextContainer variants={mainVariant} initial="hidden" animate="visible">
         <Title variants={TitleVariant}>Olaoluwa Mustapha</Title>
         <Content variants={ContentVariant}>
@@ -72,11 +92,7 @@ function App() {
           create for the web, but I am also intrigued by the tech outside the
           browser environment. Here are some of the technologies I use:
         </Content>
-        <motion.ul
-          style={{ listStyle: 'none', marginTop: '0' }}
-          variants={Variant}
-          initial="hidden"
-          animate="visible">
+        <List variants={Variant} initial="hidden" animate="visible">
           <Item variants={ItemVariant}>
             <FaHtml5 />
             HTML
@@ -93,13 +109,12 @@ function App() {
             <FaReact />
             React
           </Item>
-        </motion.ul>
+        </List>
         <Content style={{ marginBottom: '0' }} variants={ContentVariant}>
           I am currently available and look forward to working with you
           remotely.
         </Content>
       </TextContainer>
-      <WaveSVG color="#fff" />
     </PageContainer>
   );
 }
