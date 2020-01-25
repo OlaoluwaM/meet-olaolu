@@ -25,18 +25,18 @@ body {
 
 @media screen and (max-width: 990px) {
   html {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 }
 
 @media screen and (max-width: 700px) {
   html {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 400px) {
   html {
-    font-size: 9px;
+    font-size: 11px;
   }
 }

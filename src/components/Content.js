@@ -19,23 +19,23 @@ const TextContainer = styled(motion.div).attrs({
   height: fit-content;
   padding-left: 0%;
   position: absolute;
-  top: 45%;
+  top: 43%;
   left: 55%;
   transform: translate(-50%, -50%);
 
   & > svg {
-    width: 78%;
+    width: 45%;
     height: auto;
   }
 
   & > svg path {
-    stroke-width: 6px;
+    stroke-width: 9.5px;
   }
 
   & > p,
   & > ul {
-    min-width: 60%;
-    max-width: 65%;
+    min-width: 50%;
+    max-width: 58%;
   }
 
   ${({ theme }) => theme.point1`
@@ -44,7 +44,7 @@ const TextContainer = styled(motion.div).attrs({
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      top: 48%;
+      top: 42%;
       left: 50%;
 
       & > ul {
@@ -52,7 +52,7 @@ const TextContainer = styled(motion.div).attrs({
       }
 
       & > svg {
-        width: 100%;
+        width: 68%;
         padding-right: 10px;
       }
 
@@ -63,7 +63,10 @@ const TextContainer = styled(motion.div).attrs({
 `}
 
   ${({ theme }) => theme.point2`
+      top: 45%;
+
       & > svg {
+        width: 80%;
         margin-bottom: 15px;
       }
 `}
@@ -89,7 +92,6 @@ const List = styled(motion.ul)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* // padding-inline-start: 40px; */
   ${({ theme }) => theme.point1`
       text-align: center;
   `}

@@ -108,7 +108,7 @@ export const pathVariant = {
     pathOffset: 0.1,
     pathSpacing: 0.6,
     // fill: 'rgba(255, 255, 255, 1)',
-    transition: { ...tween, duration: 1.3, delay: i * 0.6 },
+    transition: { ...tween, duration: 0.8, delay: i * 0.3 },
   }),
 
   hidden: {
