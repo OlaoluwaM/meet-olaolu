@@ -15,8 +15,7 @@ export const spring = {
 
 export const tween = {
   type: 'tween',
-  duration: 0.2,
-  ease: 'easeIn',
+  ease: 'easeOut',
 };
 
 // Variants ---------------------------------------------------------
@@ -76,14 +75,16 @@ export const socialsVariants = {
   visible: {
     opacity: 1,
     y: 0,
+    x: '-50%',
     transition: {
       when: 'beforeChildren',
-      delay: 2,
+      delay: 1.6,
     },
   },
   hidden: {
     opacity: 0,
     y: 80,
+    x: '-50%',
   },
 };
 
@@ -101,27 +102,13 @@ export const linkVariant = {
   },
 };
 
-export const svgVariant = {
-  visible: {
-    opacity: 1,
-    transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0.7,
-      delayChildren: 1.2,
-    },
-  },
-  hidden: {
-    opacity: 0,
-  },
-};
-
 export const pathVariant = {
   visible: i => ({
     pathLength: 1,
     pathOffset: 0.1,
     pathSpacing: 0.6,
     // fill: 'rgba(255, 255, 255, 1)',
-    transition: { ...spring2, duration: 2, delay: i * 0.5 },
+    transition: { ...tween, duration: 1.3, delay: i * 0.6 },
   }),
 
   hidden: {
