@@ -17,8 +17,7 @@ const Socials = styled(motion.ul)`
   background: #fff;
   list-style: none;
   border-radius: 10px;
-  padding-left:0;
-
+  padding-left: 0;
 
   ${({ theme }) => theme.point1`
       min-width: 35%;
@@ -26,17 +25,12 @@ const Socials = styled(motion.ul)`
   `}
 
   ${({ theme }) => theme.point3`
-      min-width: 35%;
-      max-width: 50%;
+      min-width: 57%;
+      max-width: 70%%;
 
       &  svg {
         transform: scale(.9)
       }
-  `}
-
-  ${({ theme }) => theme.point3`
-      min-width: 45%;
-      max-width: 100%;
   `}
 `;
 

@@ -59,7 +59,7 @@ const TextContainer = styled(motion.div)`
 `}
 
   ${({ theme }) => theme.point3`
-      top: 45%;
+      padding-top: -4%;
 
       & > svg {
         width: 87%;
