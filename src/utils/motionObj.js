@@ -105,7 +105,6 @@ export const pathVariant = {
     pathLength: 1,
     pathOffset: 0.1,
     pathSpacing: 0.4,
-    fill: 'rgba(255, 255, 255, 1)',
     transition: { ...spring2, mass: 7, delay: i * 0.3 },
   }),
 
@@ -113,6 +112,5 @@ export const pathVariant = {
     pathLength: 0,
     pathOffset: 1,
     pathSpacing: 1,
-    fill: 'rgba(255, 255, 255, 0)',
   },
 };
