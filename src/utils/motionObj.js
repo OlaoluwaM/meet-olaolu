@@ -105,7 +105,7 @@ export const pathVariant = {
     pathLength: 1,
     pathOffset: 0.1,
     pathSpacing: 0.4,
-    transition: { ...spring2, mass: 7, delay: i * 0.3 },
+    transition: { ...spring2, delay: i * 0.3 },
   }),
 
   hidden: {
