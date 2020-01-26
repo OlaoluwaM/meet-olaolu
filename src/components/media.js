@@ -1,8 +1,8 @@
 import { css } from 'styled-components';
 
 const breakPoints = {
-  point1: 1070,
-  point2: 630,
+  point1: 1150,
+  point2: 890,
   point3: 900,
 };
 

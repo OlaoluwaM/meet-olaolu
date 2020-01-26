@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import TextSVG from './TextSVG';
+import SocialsList from './Socials';
 import { motion } from 'framer-motion';
 import { FaReact, FaHtml5, FaCss3, FaJs } from 'react-icons/fa';
 import {
@@ -10,45 +11,40 @@ import {
   contentVariant,
 } from '../utils/motionObj';
 
-const TextContainer = styled(motion.div).attrs({
-  className: 'txt-container',
-})`
+const TextContainer = styled(motion.div)`
   background: transparent;
   width: 100%;
-  z-index: 10;
   height: fit-content;
-  padding-left: 0%;
-  position: absolute;
-  top: 43%;
-  left: 55%;
-  transform: translate(-50%, -50%);
+  padding-left: 4.5%;
+  padding-top: 1.8%;
 
   & > svg {
-    width: 45%;
+    width: 53%;
     height: auto;
-  }
 
-  & > svg path {
-    stroke-width: 9.5px;
+    path {
+      stroke-width: 8px;
+      stroke-linejoin: round;
+    }
   }
 
   & > p,
-  & > ul {
-    min-width: 50%;
+  & > ul:first-of-type {
+    min-width: 53%;
     max-width: 58%;
   }
 
   ${({ theme }) => theme.point1`
+      padding-left: 0%;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      top: 42%;
-      left: 50%;
 
-      & > ul {
+      & > ul:first-of-type {
         justify-content: center;
+        margin-bottom: 7%;
       }
 
       & > svg {
@@ -56,18 +52,18 @@ const TextContainer = styled(motion.div).attrs({
         padding-right: 10px;
       }
 
-      & > p, & > ul {
+      & > p, & > ul:first-of-type {
         min-width: 70%;
         max-width: 90%;
       }
 `}
 
-  ${({ theme }) => theme.point2`
+  ${({ theme }) => theme.point3`
       top: 45%;
 
       & > svg {
-        width: 80%;
-        margin-bottom: 15px;
+        width: 87%;
+        margin-bottom: 25px;
       }
 `}
 `;
@@ -79,6 +75,12 @@ const Content = styled(motion.p)`
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+
+  & > strong {
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 1);
+  }
 
   ${({ theme }) => theme.point1`
     text-align: center;
@@ -92,6 +94,8 @@ const List = styled(motion.ul)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 3%;
+
   ${({ theme }) => theme.point1`
       text-align: center;
   `}
@@ -121,10 +125,13 @@ export default function PageContent() {
     <TextContainer variants={mainVariant} initial="hidden" animate="visible">
       <TextSVG />
       <Content variants={contentVariant}>
-        A 16 year old who loves programming and everything tech. I am a Front
-        end developer with 3+ years of experience. I love to program and create
-        for the web, but I am also intrigued by the tech outside the browser
-        environment. Here are some of the technologies I use:
+        <strong>A 16 year old who loves programming and everything tech</strong>
+        .{' '}
+        <strong>I am a Front end developer with 3+ years of experience</strong>.
+        I love to program and create for the web, but I am also intrigued by the
+        tech outside the browser environment.{' '}
+        <strong>I am currently available for hire</strong>, here are some of the
+        technologies I use:
       </Content>
       <List variants={listVariant} initial="hidden" animate="visible">
         <Item variants={itemVariant}>
@@ -144,9 +151,7 @@ export default function PageContent() {
           React
         </Item>
       </List>
-      <Content style={{ marginBottom: '0' }} variants={contentVariant}>
-        I am currently available for hire
-      </Content>
+      <SocialsList />
     </TextContainer>
   );
 }

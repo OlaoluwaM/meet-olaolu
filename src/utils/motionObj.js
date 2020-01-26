@@ -74,8 +74,7 @@ export const contentVariant = {
 export const socialsVariants = {
   visible: {
     opacity: 1,
-    y: 0,
-    x: '-50%',
+    y: 3,
     transition: {
       when: 'beforeChildren',
       delay: 1.6,
@@ -84,7 +83,6 @@ export const socialsVariants = {
   hidden: {
     opacity: 0,
     y: 80,
-    x: '-50%',
   },
 };
 
@@ -106,15 +104,15 @@ export const pathVariant = {
   visible: i => ({
     pathLength: 1,
     pathOffset: 0.1,
-    pathSpacing: 0.6,
-    // fill: 'rgba(255, 255, 255, 1)',
-    transition: { ...tween, duration: 0.8, delay: i * 0.3 },
+    pathSpacing: 0.4,
+    fill: 'rgba(255, 255, 255, 1)',
+    transition: { ...spring2, mass: 7, delay: i * 0.3 },
   }),
 
   hidden: {
     pathLength: 0,
     pathOffset: 1,
     pathSpacing: 1,
-    // fill: 'rgba(255, 255, 255, 0)',
+    fill: 'rgba(255, 255, 255, 0)',
   },
 };

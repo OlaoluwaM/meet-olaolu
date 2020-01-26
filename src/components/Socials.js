@@ -8,19 +8,16 @@ import { MdEmail } from 'react-icons/md';
 const Socials = styled(motion.ul)`
   display: flex;
   margin-top: 0;
-  padding: 10px;
   height: 10%;
-  min-width: 27%;
-  max-width: 35%;
-  position: absolute;
-  bottom: 0;
+  min-width: 21%;
+  max-width: 25%;
   margin-bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: auto;
+  margin-right: auto;
   background: #fff;
   list-style: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
+  padding-left:0;
 
 
   ${({ theme }) => theme.point1`
@@ -33,12 +30,12 @@ const Socials = styled(motion.ul)`
       max-width: 50%;
 
       &  svg {
-        transform: scale(.8)
+        transform: scale(.9)
       }
   `}
 
-  ${({ theme }) => theme.point2`
-      min-width: 59%;
+  ${({ theme }) => theme.point3`
+      min-width: 45%;
       max-width: 100%;
   `}
 `;
@@ -52,6 +49,16 @@ const Link = styled(motion.li)`
   justify-content: center;
   cursor: pointer;
   transform: scale(1.1);
+
+  &:first-of-type {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &:last-of-type {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 `;
 
 const Anchor = styled(motion.a).attrs({
@@ -59,8 +66,8 @@ const Anchor = styled(motion.a).attrs({
   target: '_blank',
 })`
   width: 100%;
+  padding: 10px;
   height: 100%;
-  padding: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,7 +103,7 @@ export default function SocialsList() {
         </Anchor>
       </Link>
       <Link variants={linkVariant}>
-        <Anchor href="#">
+        <Anchor href="mailto:jomeemustapha@gmail.com">
           <MdEmail style={SVGstyle} />
         </Anchor>
       </Link>
