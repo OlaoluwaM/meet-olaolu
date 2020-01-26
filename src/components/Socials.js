@@ -20,13 +20,13 @@ const Socials = styled(motion.ul)`
   padding-left: 0;
 
   ${({ theme }) => theme.point1`
-      min-width: 35%;
+      min-width: 37%;
       max-width: 50%;
   `}
 
   ${({ theme }) => theme.point3`
-      min-width: 57%;
-      max-width: 70%%;
+      min-width: 55%;
+      max-width: 70%;
 
       &  svg {
         transform: scale(.9)
