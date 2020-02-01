@@ -25,11 +25,11 @@ const Socials = styled(motion.ul)`
   `}
 
   ${({ theme }) => theme.point3`
-      min-width: 55%;
+      min-width: 61%;
       max-width: 70%;
 
       &  svg {
-        transform: scale(.9)
+        transform: scale(.7)
       }
   `}
 `;

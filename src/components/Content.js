@@ -62,8 +62,8 @@ const TextContainer = styled(motion.div)`
       margin-top: -4%;
 
       & > svg {
-        width: 80%;
-        margin-bottom: 25px;
+        width: 90%;
+        margin-bottom: 17px;
       }
 `}
 `;
