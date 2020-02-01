@@ -34,7 +34,7 @@ const Socials = styled(motion.ul)`
   `}
 `;
 
-const Link = styled(motion.li)`
+const Link = styled.li`
   font-family: var(--font-body);
   flex-basis: calc(100% / 3);
   height: 100%;
@@ -86,18 +86,20 @@ const SVGstyle = {
 export default function SocialsList() {
   return (
     <Socials variants={socialsVariants} initial="hidden" animate="visible">
-      <Link variants={linkVariant}>
-        <Anchor href="https://twitter.com/OlaoluMustapha">
+      <Link>
+        <Anchor
+          variants={linkVariant}
+          href="https://twitter.com/OlaoluMustapha">
           <FaTwitter style={SVGstyle} />
         </Anchor>
       </Link>
-      <Link variants={linkVariant}>
-        <Anchor href="https://github.com/OlaoluwaM">
+      <Link>
+        <Anchor variants={linkVariant} href="https://github.com/OlaoluwaM">
           <FaGithub style={SVGstyle} />
         </Anchor>
       </Link>
-      <Link variants={linkVariant}>
-        <Anchor href="mailto:jomeemustapha@gmail.com">
+      <Link>
+        <Anchor variants={linkVariant} href="mailto:jomeemustapha@gmail.com">
           <MdEmail style={SVGstyle} />
         </Anchor>
       </Link>

@@ -71,10 +71,11 @@ export const socialsVariants = {
     opacity: 1,
     y: 5,
     transition: {
+      ...spring2,
       when: 'beforeChildren',
-      delay: 1.6,
-      ...spring,
-      mass: 4,
+      delayChildren: 1.5,
+      staggerChildren: 0.1,
+      delay: 1.7,
     },
   },
   hidden: {
@@ -87,6 +88,7 @@ export const linkVariant = {
   visible: {
     opacity: 1,
     y: 0,
+    transition: { ...spring },
   },
   hidden: {
     opacity: {
