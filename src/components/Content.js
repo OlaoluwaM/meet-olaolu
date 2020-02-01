@@ -16,15 +16,14 @@ const TextContainer = styled(motion.div)`
   width: 100%;
   height: fit-content;
   padding-left: 4.5%;
-  padding-top: 1.8%;
+  padding-top: 3.2%;
 
   & > svg {
-    width: 53%;
+    width: 54%;
     height: auto;
 
     path {
       stroke-width: 8px;
-      stroke-linejoin: round;
     }
   }
 
@@ -41,6 +40,7 @@ const TextContainer = styled(motion.div)`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding-top: 1.8%;
 
       & > ul:first-of-type {
         justify-content: center;
@@ -62,7 +62,7 @@ const TextContainer = styled(motion.div)`
       margin-top: -4%;
 
       & > svg {
-        width: 87%;
+        width: 80%;
         margin-bottom: 25px;
       }
 `}

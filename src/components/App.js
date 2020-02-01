@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import '../index.css';
-import Particles from 'react-particles-js';
 import PageContent from './Content';
-import { params } from '../utils/parameters';
 import { motion } from 'framer-motion';
+import Particles from 'react-particles-js';
+import { params } from '../utils/parameters';
+import '../index.css';
 
 const PageContainer = styled(motion.main).attrs({
   className: 'App',

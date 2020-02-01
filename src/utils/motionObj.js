@@ -61,11 +61,6 @@ export const itemVariant = {
   },
 };
 
-export const titleVariant = {
-  visible: { opacity: 1, y: 0, transition: { ...spring2 } },
-  hidden: { opacity: 0, y: -80 },
-};
-
 export const contentVariant = {
   visible: { opacity: 1, y: 0, transition: { ...spring2 } },
   hidden: { opacity: 0, y: -80 },
@@ -74,10 +69,12 @@ export const contentVariant = {
 export const socialsVariants = {
   visible: {
     opacity: 1,
-    y: 3,
+    y: 5,
     transition: {
       when: 'beforeChildren',
       delay: 1.6,
+      ...spring,
+      mass: 4,
     },
   },
   hidden: {
@@ -90,7 +87,6 @@ export const linkVariant = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { ...spring, duration: 1.3 },
   },
   hidden: {
     opacity: {

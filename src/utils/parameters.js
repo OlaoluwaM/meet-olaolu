@@ -1,10 +1,10 @@
 export const params = {
   particles: {
     number: {
-      value: 142,
+      value: 70,
       density: {
         enable: true,
-        value_area: 947.0220103698913,
+        value_area: 1200.9588744762158,
       },
     },
     color: {
@@ -40,17 +40,17 @@ export const params = {
       random: true,
       anim: {
         enable: false,
-        speed: 19.476567255021315,
+        speed: 40,
         size_min: 0.1,
         sync: false,
       },
     },
     line_linked: {
       enable: true,
-      distance: 176.26369048095938,
+      distance: 180.23971861905397,
       color: '#ffffff',
-      opacity: 0.16023971861905398,
-      width: 1.2819177489524316,
+      opacity: 0.5,
+      width: 1,
     },
     move: {
       enable: true,
@@ -75,8 +75,8 @@ export const params = {
         mode: 'repulse',
       },
       onclick: {
-        enable: true,
-        mode: 'push',
+        enable: false,
+        mode: 'remove',
       },
       resize: true,
     },
