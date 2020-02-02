@@ -16,11 +16,12 @@ const TextContainer = styled(motion.div)`
   width: 100%;
   height: fit-content;
   padding-left: 4.5%;
-  padding-top: 3.2%;
+  padding-top: 0%;
 
   & > svg {
-    width: 54%;
+    width: auto;
     height: auto;
+    left: 0;
 
     path {
       stroke-width: 8px;
@@ -29,13 +30,13 @@ const TextContainer = styled(motion.div)`
 
   & > p,
   & > ul:first-of-type {
-    min-width: 53%;
-    max-width: 58%;
+    min-width: 50%;
+    max-width: 55%;
   }
 
   ${({ theme }) => theme.point1`
       padding-left: 0%;
-      text-align: center;
+      text-align: left;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -43,27 +44,24 @@ const TextContainer = styled(motion.div)`
       padding-top: 1.8%;
 
       & > ul:first-of-type {
-        justify-content: center;
         margin-bottom: 7%;
       }
 
       & > svg {
-        width: 68%;
-        padding-right: 10px;
+        padding-left: calc(((100 - 75) / 100) * 100%)
       }
 
       & > p, & > ul:first-of-type {
-        min-width: 70%;
-        max-width: 90%;
+        min-width: 75%;
+        max-width: 75%;
       }
-`}
+      `}
 
   ${({ theme }) => theme.point3`
       margin-top: -4%;
 
       & > svg {
-        width: 90%;
-        margin-bottom: 17px;
+        margin-bottom: 8px;
       }
 `}
 `;
@@ -71,8 +69,8 @@ const TextContainer = styled(motion.div)`
 const Content = styled(motion.p)`
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 1.3rem;
-  margin-top: 0;
+  font-size: 1.1rem;
+  margin-top: -5px;
   margin-bottom: 1rem;
   line-height: 2rem;
   color: rgba(255, 255, 255, 0.7);
@@ -83,7 +81,7 @@ const Content = styled(motion.p)`
   }
 
   ${({ theme }) => theme.point1`
-    text-align: center;
+    text-align: left;
   `}
 `;
 
@@ -95,14 +93,19 @@ const List = styled(motion.ul)`
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 3%;
+  text-align: left;
+
+  & > li:first-of-type {
+    margin-left: -2px;
+  }
 
   ${({ theme }) => theme.point1`
-      text-align: center;
+      text-align: left;
   `}
 `;
 
 const Item = styled(motion.li)`
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: var(--font-body);
   margin: 10px;
   display: flex;
@@ -125,11 +128,10 @@ export default function PageContent() {
     <TextContainer variants={mainVariant} initial="hidden" animate="visible">
       <TextSVG />
       <Content variants={contentVariant}>
-        <strong>A 16 year old who loves programming and everything tech</strong>
-        .{' '}
-        <strong>I am a Front end developer with 3+ years of experience</strong>.
-        I love to program and create for the web, but I am also intrigued by the
-        tech outside the browser environment.{' '}
+        <strong>I am a Front end developer with 3+ years of experience</strong>,
+        who enjoys programming and everything tech. I love to create for the web
+        and produce quality work doing so; I am also intrigued by some of the
+        technology outside the browser environment.{' '}
         <strong>I am currently available for hire</strong>, here are some of the
         technologies I use:
       </Content>

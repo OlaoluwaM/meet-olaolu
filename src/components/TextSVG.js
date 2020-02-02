@@ -5,8 +5,10 @@ import { pathVariant } from '../utils/motionObj';
 export default function TextSVG() {
   return (
     <svg
-      height="216"
-      viewBox="0 0 513 216"
+      // width="512"
+      // height="216"
+      viewBox="0 0 970 226"
+      // viewBox="0 0 513 216"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <mask
