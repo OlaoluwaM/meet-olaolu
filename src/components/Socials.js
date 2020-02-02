@@ -8,9 +8,9 @@ import { MdEmail } from 'react-icons/md';
 const Socials = styled(motion.ul)`
   display: flex;
   margin-top: 0;
-  height: 10%;
-  min-width: 21%;
-  max-width: 25%;
+  height: 8%;
+  min-width: 29%;
+  max-width: 55%;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
@@ -20,13 +20,13 @@ const Socials = styled(motion.ul)`
   padding-left: 0;
 
   ${({ theme }) => theme.point1`
-      min-width: 37%;
+      min-width: 40%;
       max-width: 50%;
   `}
 
   ${({ theme }) => theme.point3`
-      min-width: 55%;
-      max-width: 60%;
+      min-width: 57%;
+      max-width: 77%;
 
       &  svg {
         transform: scale(.72)

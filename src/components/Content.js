@@ -14,9 +14,13 @@ import {
 const TextContainer = styled(motion.div)`
   background: transparent;
   width: 100%;
-  height: fit-content;
+  height: inherit;
   padding-left: 4.5%;
   padding-top: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 
   & > svg {
     width: 57%;
@@ -37,9 +41,6 @@ const TextContainer = styled(motion.div)`
   ${({ theme }) => theme.point1`
       padding-left: 0%;
       text-align: left;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
       padding-top: 1.8%;
 
@@ -50,7 +51,6 @@ const TextContainer = styled(motion.div)`
       & > svg {
         width: 71%;
         margin-left: -27px;
-        /* padding-left: calc(((100 - 75) / 100) * 100%) */
       }
 
       & > p, & > ul:first-of-type {
@@ -63,6 +63,8 @@ const TextContainer = styled(motion.div)`
       margin-top: -4%;
 
       & > svg {
+        width: 83%;
+        margin-left: 13px;
         margin-bottom: 8px;
       }
 `}

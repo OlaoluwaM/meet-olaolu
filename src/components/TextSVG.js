@@ -4,13 +4,7 @@ import { pathVariant } from '../utils/motionObj';
 
 export default function TextSVG() {
   return (
-    <svg
-      // width="512"
-      // height="216"
-      viewBox="0 0 512 216"
-      // viewBox="0 0 513 216"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 512 216" fill="none" xmlns="http://www.w3.org/2000/svg">
       <mask
         id="path-1-outside-1"
         maskUnits="userSpaceOnUse"
