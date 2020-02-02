@@ -76,7 +76,7 @@ export const params = {
       },
       onclick: {
         enable: false,
-        mode: 'remove',
+        mode: 'grab',
       },
       resize: true,
     },

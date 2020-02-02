@@ -80,7 +80,7 @@ export const socialsVariants = {
   },
   hidden: {
     opacity: 0,
-    y: 80,
+    y: 30,
   },
 };
 

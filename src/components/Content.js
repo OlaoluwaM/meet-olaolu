@@ -19,7 +19,7 @@ const TextContainer = styled(motion.div)`
   padding-top: 0%;
 
   & > svg {
-    width: auto;
+    width: 57%;
     height: auto;
     left: 0;
 
@@ -48,7 +48,9 @@ const TextContainer = styled(motion.div)`
       }
 
       & > svg {
-        padding-left: calc(((100 - 75) / 100) * 100%)
+        width: 71%;
+        margin-left: -27px;
+        /* padding-left: calc(((100 - 75) / 100) * 100%) */
       }
 
       & > p, & > ul:first-of-type {

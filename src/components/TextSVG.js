@@ -7,7 +7,7 @@ export default function TextSVG() {
     <svg
       // width="512"
       // height="216"
-      viewBox="0 0 970 226"
+      viewBox="0 0 512 216"
       // viewBox="0 0 513 216"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
