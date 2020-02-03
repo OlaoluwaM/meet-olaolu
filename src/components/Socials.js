@@ -30,6 +30,14 @@ const Socials = styled(motion.ul)`
         transform: scale(.78)
       }
   `}
+
+  ${({ theme }) => theme.point4`
+      min-width: 66%;
+
+      &  svg {
+        transform: scale(0.69);
+      }
+`}
 `;
 
 const Link = styled.li`

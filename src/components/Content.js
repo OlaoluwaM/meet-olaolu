@@ -68,12 +68,18 @@ const TextContainer = styled(motion.div)`
         margin-bottom: 8px;
       }
 `}
+
+${({ theme }) => theme.point4`
+      & > svg {
+        width: 82%;
+      }
+`}
 `;
 
 const Content = styled(motion.p)`
   font-family: var(--font-body);
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-top: -5px;
   margin-bottom: 1rem;
   line-height: 2rem;
@@ -109,7 +115,7 @@ const List = styled(motion.ul)`
 `;
 
 const Item = styled(motion.li)`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-family: var(--font-body);
   margin: 10px;
   display: flex;

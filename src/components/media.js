@@ -4,6 +4,7 @@ const breakPoints = {
   point1: 1210,
   point2: 890,
   point3: 900,
+  point4: 470,
 };
 
 const media = Object.keys(breakPoints).reduce((acc, label) => {
