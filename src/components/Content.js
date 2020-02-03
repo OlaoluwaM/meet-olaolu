@@ -23,7 +23,7 @@ const TextContainer = styled(motion.div)`
   justify-content: center;
 
   & > svg {
-    width: 57%;
+    width: 55%;
     height: auto;
     left: 0;
 
@@ -63,7 +63,7 @@ const TextContainer = styled(motion.div)`
       margin-top: -4%;
 
       & > svg {
-        width: 83%;
+        width: 78%;
         margin-left: 13px;
         margin-bottom: 8px;
       }
@@ -128,6 +128,23 @@ const Item = styled(motion.li)`
 `;
 
 export default function PageContent() {
+  const onResize = () => {
+    const obj = document.querySelector('.App > div:last-of-type > svg');
+    const clientRect = obj.getBoundingClientRect();
+    if (clientRect.top <= 0) {
+      document.getElementById('root').classList.add('landscape');
+    } else {
+      document.getElementById('root').classList.remove('landscape');
+    }
+  };
+
+  React.useEffect(() => {
+    onResize();
+    window.addEventListener('resize', onResize);
+
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
   return (
     <TextContainer variants={mainVariant} initial="hidden" animate="visible">
       <TextSVG />

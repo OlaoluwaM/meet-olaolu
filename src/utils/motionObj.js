@@ -69,7 +69,7 @@ export const contentVariant = {
 export const socialsVariants = {
   visible: {
     opacity: 1,
-    y: 5,
+    y: 10,
     transition: {
       ...spring2,
       when: 'beforeChildren',
@@ -80,7 +80,7 @@ export const socialsVariants = {
   },
   hidden: {
     opacity: 0,
-    y: 70,
+    y: 40,
   },
 };
 

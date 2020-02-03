@@ -14,7 +14,7 @@ body,
 #root {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  background: #000;
 }
 
 body {
@@ -23,9 +23,29 @@ body {
   color: #fff;
 }
 
+#root {
+  display: flex;
+}
+
+.landscape {
+  align-items: flex-start;
+}
+
+.landscape > .App > div:last-of-type {
+  padding-top: 6%;
+}
+
+.landscape > .App > div:last-of-type > ul:first-of-type {
+  margin-bottom: 4%;
+}
+
+.landscape > .App > div:last-of-type > ul:last-of-type {
+  margin-bottom: 8%;
+}
+
 #canvas {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 @media screen and (max-width: 990px) {

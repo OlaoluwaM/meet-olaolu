@@ -8,12 +8,10 @@ import { MdEmail } from 'react-icons/md';
 const Socials = styled(motion.ul)`
   display: flex;
   margin-top: 0;
-  height: 8%;
+  height: 11%;
   min-width: 29%;
   max-width: 55%;
   margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
   background: #fff;
   list-style: none;
   border-radius: 10px;
@@ -29,7 +27,7 @@ const Socials = styled(motion.ul)`
       max-width: 77%;
 
       &  svg {
-        transform: scale(.72)
+        transform: scale(.78)
       }
   `}
 `;
