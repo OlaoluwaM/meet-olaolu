@@ -26,6 +26,7 @@ const TextContainer = styled(motion.div)`
     width: 55%;
     height: auto;
     left: 0;
+    overflow: visible;
 
     path {
       stroke-width: 8px;
@@ -50,7 +51,7 @@ const TextContainer = styled(motion.div)`
 
       & > svg {
         width: 71%;
-        margin-left: -27px;
+        margin-left: -40px;
       }
 
       & > p, & > ul:first-of-type {
@@ -64,7 +65,7 @@ const TextContainer = styled(motion.div)`
 
       & > svg {
         width: 78%;
-        margin-left: 13px;
+        margin-left: 27px;
         margin-bottom: 8px;
       }
 `}
@@ -72,6 +73,7 @@ const TextContainer = styled(motion.div)`
 ${({ theme }) => theme.point4`
       & > svg {
         width: 82%;
+        margin-left: 42px;
       }
 `}
 `;
